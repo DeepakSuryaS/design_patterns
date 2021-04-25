@@ -18,9 +18,13 @@ then the filter will call the next filter in the chain to handle the request. Us
 All the objects on the chain are handlers that implement a common method handle request declared in an abstract superclass handler. These handle objects are connected from one to the next in the chain. There are subclasses of handler to handle requests in their own way.
 
 ### Can you see an issue with the design?
-What if, for example, there's a mistake in the second filter? What if it's rule doesn't match but forgets to pass the request onto the next filter? Then the handling ends prematurely. This is a problem with the Chain of Responsibility. We need an algorithm to make sure that each filter class handles requests in a similar fashion. That is, we want to make sure that each filter goes through the following steps.
+What if, for example, there's a mistake in the second filter? What if it's rule doesn't match but forgets to pass the request onto the next filter? Then the handling ends prematurely. This is a problem with the Chain of Responsibility. We need an algorithm to make sure that each filter class handles requests in a similar fashion. 
 
-First, check if a rule matches. If it does match, do something specific. If it doesn't match, call the next filter in the list.
+That is, we want to make sure that each filter goes through the following steps.
+1. First, check if a rule matches. 
+2. If it does match, do something specific. 
+3. If it doesn't match, call the next filter in the list.
+
 *To achieve this, you can use the Template Pattern that you learned from an earlier lesson to ensure that each class will handle the request in a similar way following the required steps.*
 
 **Often, design patterns can have their own internal problems and you can use other design patterns to fix those problems. **
