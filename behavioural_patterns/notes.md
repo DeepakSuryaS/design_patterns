@@ -1,0 +1,3 @@
+These patterns focus on ways that individual objects to collaborate to achieve a common goal.
+
+When, designing software, it's important to recognize how your different objects work together towards a common goal. Each object you make is a piece of a larger solution. In order for each one to do its work effectively, it needs to have a set purpose. Think of it like each person working at a company. If people of the company didn't have any predefined roles, there'd be no way to make sure that each of their functions would be executed. Less effective and not nearly as organised.
