@@ -41,7 +41,7 @@ public class Subject {
         observers.add(observer);
     }
 
-    public void unRegisterObserver(Observer observer) {
+    public void unregisterObserver(Observer observer) {
         observers.remove(observer);
     }
 
